@@ -1,0 +1,35 @@
+
+<div class="container mt-3">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Shipper Id</th>
+          <th scope="col">Company Name</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Edit</th>
+          <th scope="col">Details</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let shipper of shippers; let i = index">
+          <td>
+            {{ i + 1 }}
+          </td>
+          <td>{{ shipper.id }}</td>
+          <td>{{ shipper.companyName }}</td>
+          <td>{{ shipper.phone }}</td>
+   
+          <td>
+            <a href="" class="btn btn-warning btn-sm">Update</a>
+            <a href="" class="btn btn-danger btn-sm">Delete</a>
+          </td>
+          <td>
+            <a href="" class="btn btn-info btn-sm">Detail</a>
+          </td>
+     
+        </tr>
+      </tbody>
+    </table>
+</div>

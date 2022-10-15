@@ -1,0 +1,41 @@
+
+
+
+
+
+<div class="mt-3">
+    <table class="table-responsive table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Log Message</th>
+          <th scope="col">Parameters</th>
+          <th scope="col">Date</th>
+        
+      
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let log of logs; let i = index"  [class]="getBacGroundColor(log.status)">
+          <td>
+            {{ i + 1 }}
+          </td>
+     
+          <td>{{ log.message }}</td>
+          <td>{{ log.parameter }}</td>
+          <td>{{ log.date }}</td>
+   
+        
+          <td >
+            
+            <button class="btn btn-lg btn-primary" *ngIf="!log.status" (click)="open(log.id)">Detail</button>
+
+
+            
+        </td>
+     
+        </tr>
+      </tbody>
+    </table>
+</div>
+
